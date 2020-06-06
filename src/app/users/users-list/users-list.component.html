@@ -1,1 +1,33 @@
-<p>users-list works!</p>
+<div class="container my-3">
+    <div class="text-right">
+        <button class="btn btn-primary" [routerLink]="['/users/0']">
+            <i class="fas fa-plus"></i> Add
+        </button>
+    </div>
+
+    <ng-container *ngIf="userService?.users?.length; else noUsers;">
+        <div class="list-wrapper">
+            <ng-container *ngFor="let user of userService?.users">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ user?.firstName }} {{ user?.lastName }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ user?.department }}</h6>
+                        <p class="card-text"></p>
+                        <a class="card-link">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                        <a [routerLink]="['/users/', user?.id]" class="card-link">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+    
+    <ng-template #noUsers>
+        <div class="text-center">
+            <h3>There is no users!</h3>
+        </div>
+    </ng-template>
+</div>

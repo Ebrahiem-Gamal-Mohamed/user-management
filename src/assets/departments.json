@@ -1,0 +1,46 @@
+[
+    {
+        "name": "HumanResources",
+        "value": "Human Resources"
+    },
+    {
+        "name": "InformationTechnology",
+        "value": "Information Technology"
+    },
+    {
+        "name": "Management",
+        "value": "Management"
+    },
+    {
+        "name": "Financial",
+        "value": "Financial"
+    },
+    {
+        "name": "Department1",
+        "value": "Department1"
+    },
+    {
+        "name": "Department2",
+        "value": "Department2"
+    },
+    {
+        "name": "Department3",
+        "value": "Department3"
+    },
+    {
+        "name": "Department4",
+        "value": "Department4"
+    },
+    {
+        "name": "Department5",
+        "value": "Department5"
+    },
+    {
+        "name": "Department6",
+        "value": "Department6"
+    },
+    {
+        "name": "Department7",
+        "value": "Department7"
+    }
+]

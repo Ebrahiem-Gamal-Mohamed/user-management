@@ -20,7 +20,7 @@ export class AuthService {
   login(user: User.IUserCredential) {
     if (user) {
       this.browserStorage.setLocal('userAuth', user);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/dashboard']);
     }
   }
 
