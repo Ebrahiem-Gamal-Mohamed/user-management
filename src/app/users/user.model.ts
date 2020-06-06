@@ -7,3 +7,9 @@ export interface IUser {
     phone?: string;
     department?: string;
 }
+
+
+export interface IUserCredential {
+    username?: string;
+    password?: string;
+}

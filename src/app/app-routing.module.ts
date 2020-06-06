@@ -3,18 +3,26 @@ import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent } from "./auth/login/login.component";
 import { HomeComponent } from "./core/home/home.component";
 import { AuthGuard } from "./auth/auth.guard";
+import { DashboardComponent } from './core/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/home", pathMatch: "full" },
-  { path: "home", component: HomeComponent },
+  { path: "", redirectTo: "/dashboard", pathMatch: "full" },
   {
-    path: "users",
-    loadChildren: () =>
-      import("./users/users.module").then((m) => m.UsersModule),
+    path: "",
+    component: HomeComponent,
     canActivate: [AuthGuard],
+    children: [
+      { path: '/dashboard', component: DashboardComponent },
+      {
+        path: "users",
+        loadChildren: () =>
+          import("./users/users.module").then((m) => m.UsersModule),
+        canActivate: [AuthGuard],
+      }
+    ],
   },
   { path: "login", component: LoginComponent },
-  { path: "**", redirectTo: "/home", pathMatch: "full" },
+  { path: "**", redirectTo: "/dashboard", pathMatch: "full" },
 ];
 
 @NgModule({
