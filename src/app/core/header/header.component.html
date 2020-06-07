@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">
-    <i class="fas fa-ubuntu"></i>
+  <a class="navbar-brand mr-5" tooltip="University of everything" placement="right">
+    <fa-icon [icon]="['fas', 'university']"></fa-icon>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" [routerLink]="['/dashboard']" [routerLinkActive]="'active'"
-        [routerLinkActiveOptions]="{exact: true}">
+        [routerLinkActiveOptions]="{'exact': true}">
         <a class="nav-link"><strong>Dashboard</strong></a>
       </li>
       <li class="nav-item" [routerLink]="['/users']" [routerLinkActive]="'active'">
@@ -18,7 +18,9 @@
       </li>
     </ul>
     <div class="icons">
-      <i class="fas fa-sign-out-alt" (click)="logout()"></i>
+      <a (click)="logout()" tooltip="Sign out" placement="left">
+        <fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon>
+      </a>
     </div>
   </div>
 </nav>

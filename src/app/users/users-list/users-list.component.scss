@@ -4,5 +4,10 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
         display: inline-block;
         width: 16rem;
+
+        .card-link {
+            cursor: pointer;
+            margin: 0 10px;
+        }
     }
 }

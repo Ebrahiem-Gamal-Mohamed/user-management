@@ -29,7 +29,6 @@
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.css",
-              "./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -95,7 +94,6 @@
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.css",
-              "./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
               "src/styles.scss"
             ],
             "scripts": []
